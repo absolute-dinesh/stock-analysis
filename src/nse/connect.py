@@ -1,9 +1,7 @@
-from nsetools import Nse
+from nse import Nse
 
-nse = Nse()
-
-q = nse.get_quote('infy')
-
-from pprint import pprint
-
-pprint(q)
+db = Nse()
+#Load OIL Brand Data.
+data = db.load('OIL')
+#Bar Grap Of Data
+db.bar(data)
